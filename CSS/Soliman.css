@@ -1,0 +1,482 @@
+/* Start Global VAlues */
+:root {
+    --main-color: #9caa54d6;
+    --secondary-color: #565e37;
+    --main-padding: 60px;
+    --secondary-padding: 20px;
+    --main-background-color: #fffbdd7a;
+    --letter-color: #98a18e;
+    --color-br: #694531;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.container {
+    padding-left: var(--secondary-padding);
+    padding-right: var(--secondary-padding);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* ====================End Global VAlues======================== */
+/* Start Special Header */
+.special-header {
+    text-align: center;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.special-header p:first-child {
+    font-weight: 800;
+    font-size: 100px;
+    letter-spacing: -3px;
+    color: #fbf4c3;
+    margin: 0;
+}
+
+.special-header p:last-child {
+    font-size: 20px;
+    margin-top: -33px;
+    letter-spacing: -1px;
+    color: var(--letter-color);
+}
+
+@media (max-width: 767px) {
+    .special-header p:first-child {
+        font-size: 70px;
+    }
+}
+
+/* ====================End Special Header======================= */
+
+/* Start Logo */
+.logo {
+    padding: var(--secondary-padding);
+    background-color: var(--main-color);
+    height: 80px;
+}
+
+.logo .container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo .image {
+    width: 70px;
+    transform: skew(18deg, 346deg) rotateY(179deg);
+    margin-top: -18px;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.logo .bars {
+    font-size: 25px;
+    display: none;
+    position: absolute;
+    top: 6px;
+    right: 45px;
+}
+
+@media (max-width: 767px) {
+    .logo .bars {
+        display: block;
+    }
+}
+
+.logo ul a {
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    color: var(--secondary-color);
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.logo ul a:hover {
+    margin-top: -2px;
+}
+
+.logo ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 767px) {
+    .logo .list {
+        display: none;
+    }
+
+    .logo ul {
+        flex-direction: column;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .logo .links:hover .list {
+        display: flex;
+    }
+
+    .logo .links:hover .bars {
+        display: none;
+    }
+
+    .logo ul li {
+        background-color: #fbf4c3d4;
+        min-width: 150px;
+    }
+
+    .logo .list li:not(:last-child) {
+        border-bottom: 1px solid #777;
+    }
+}
+
+/* ==========================End Logo======================== */
+/* Start landing */
+.landing {
+    background-image: url(../Images/horse-3.jpg);
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+@media (max-width: 992px) {
+    .landing {
+        background-position-x: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .landing {
+        background-position-y: center;
+    }
+}
+
+.landing .text {
+    text-align: center;
+}
+
+.landing h2 {
+    padding-top: 75px;
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-weight: 900;
+    font-size: 45px;
+    letter-spacing: -1px;
+}
+
+@media (min-width: 1200px) {
+    .landing h2 {
+        padding-top: 60px;
+    }
+}
+
+.landing p {
+    font-size: 23px;
+    color: var(--color-br);
+    font-weight: 500;
+}
+
+/* =========================End landing====================== */
+/* Start Features */
+.features {
+    background-color: var(--main-background-color);
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 30px;
+    text-align: center;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.features i {
+    font-size: 35px;
+    color: var(--main-color);
+}
+
+.features h3 {
+    color: var(--secondary-color);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.features p {
+    color: var(--letter-color);
+    letter-spacing: -1.2px;
+    line-height: 16px;
+}
+
+/* =========================End Features===================== */
+/* Start Activities */
+
+.activities .active-content {
+    display: flex;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.activities .info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 30px;
+    margin-right: 30px;
+}
+
+.activities .info .active {
+    position: relative;
+    margin-left: 50px;
+}
+
+.activities .info i {
+    font-size: 28px;
+    color: var(--main-color);
+    position: absolute;
+    left: -62px;
+    top: 13px;
+}
+
+.activities .info h3 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--secondary-color);
+}
+
+.activities .info p {
+    color: var(--letter-color);
+    letter-spacing: -1px;
+    padding-top: 10px;
+}
+
+.activities .image {
+    width: 190px;
+    height: 260px;
+    position: relative;
+}
+
+.activities .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.activities .image::after {
+    content: "";
+    width: 70px;
+    height: calc(100% + 60px);
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    background-color: var(--secondary-color);
+    z-index: -1;
+}
+
+@media (max-width: 992px) {
+    .activities .image {
+        display: none;
+    }
+}
+
+/* =========================Start Activities================= */
+/* start courses */
+.courses {
+    background-color: var(--main-background-color);
+    padding-bottom: 40px;
+}
+
+.courses .image img {
+    width: 100%;
+}
+
+.courses .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 30px;
+}
+
+.courses .content .course:not(:first-child) {
+    margin-left: var(--secondary-padding);
+}
+
+.courses .content .course {
+    background-color: white;
+}
+
+.courses .course h2,
+.courses .content p {
+    padding-left: 15px;
+    letter-spacing: -1px;
+}
+
+.courses .course h2 {
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+
+.courses .course p {
+    color: var(--letter-color);
+}
+
+/* =========================End courses=======================*/
+/* Start about */
+.about {
+    padding-bottom: var(--main-padding);
+}
+
+.about .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .image {
+    flex-basis: 300px;
+    transform: rotateY(180deg);
+}
+
+.about img {
+    width: 100%;
+}
+
+.about .info {
+    flex-basis: calc(100% - 400px);
+}
+
+.about span {
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: var(--main-color);
+}
+
+@media (max-width:767px) {
+    .about .content {
+        flex-direction: column;
+    }
+
+    .about .image {
+        flex-basis: 20ppx;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about img {
+        width: 77%;
+    }
+}
+
+.about .info h4 {
+    line-height: 30px;
+    padding-bottom: 45px;
+}
+
+.about .info p {
+    line-height: 30px;
+    color: var(--letter-color);
+    padding-top: 25px;
+}
+
+/* =========================End about=========================*/
+/* Start Contact */
+.contact {
+    background-color: var(--main-background-color);
+    padding-bottom: var(--main-padding);
+}
+
+.contact .content {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contact .content p:first-child {
+    color: var(--secondary-color);
+    font-weight: 800;
+    font-size: 35px;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.contact .content a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 800;
+    font-size: 33px;
+}
+
+@media (max-width: 767px) {
+    .contact .content p:first-child {
+        font-size: 25px;
+    }
+
+    .contact .content a {
+        font-size: 20px;
+    }
+}
+
+.contact .content i {
+    margin-left: 6px;
+}
+
+/* =========================End Contact====================== */
+/* Start Footer */
+footer {
+    background-color: var(--color-br);
+}
+
+footer .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #fbf4c3;
+    font-size: 18px;
+}
+
+footer p {
+    text-align: center;
+    margin: 0;
+}
+
+footer p span {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+footer i {
+    font-size: 13px;
+}
+
+/* =========================End Footer======================= */
